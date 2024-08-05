@@ -19,5 +19,21 @@ namespace ADV_03
         {
             return X < Y;
         }
+
+
+        public static bool SortAscending(string X , string Y)
+        {
+            return X?.Length > Y?.Length;
+
+        }
+
+
+
+        public static bool SortDescending(string X, string Y)
+        {
+            return X?.Length < Y?.Length;
+
+        }
+
     }
 }

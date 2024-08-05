@@ -67,10 +67,16 @@
             //    Console.WriteLine(Number); 
             #endregion
 
+            #region Delegate Ex 02 Using Generics
+
+            //string[] Names = { "Ahmed ", " Mona", "Amr ", "Aya" };
+            //SortingAlgorithms<string>.BubbleSort(Names, CompareFunctions.SortAscending);
 
 
+            //foreach (string Name in Names)
+            //    Console.WriteLine(Name);
 
-
+            #endregion
 
 
         }
