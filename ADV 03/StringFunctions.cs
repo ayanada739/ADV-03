@@ -13,8 +13,8 @@ namespace ADV_03
             int Count = 0;
             if (Name is not null)
                 for (int i = 0; i < Name.Length; i++)
-                    if (char .IsUpper(Name[i]))
-                       Count++;
+                    if (char.IsUpper(Name[i]))
+                        Count++;
             return Count;
 
         }
@@ -28,4 +28,5 @@ namespace ADV_03
                         Count++;
             return Count;
         }
+    }
 }

@@ -56,6 +56,22 @@
 
             #endregion
 
+            #region Delegate EX 02
+            //int[] numbers = { 10, 2, 3, 5, 15, 1, 8, 20 };
+            //SortingAlgorithms.BubbleSort(numbers, CompareFunctions.ComapreGrt);
+
+            //CompareFuncDelegte compareFunc = CompareFunctions.ComapreLess;
+
+            //SortingAlgorithms.BubbleSort(numbers, compareFunc);
+            //foreach (int Number in numbers)
+            //    Console.WriteLine(Number); 
+            #endregion
+
+
+
+
+
+
 
         }
     }
