@@ -20,6 +20,24 @@
 
             #endregion
 
+            #region 2. You need to parameterize ProcessBooks function to accept BookFunctions Methods using following cases: 
+
+            //a) Create User Defined Delegate with the same signature of methods existed in Bookfunctions class.
+            Func<Book, string> getTitleFunc = BookFunctions.GetTitle;
+            LibraryEngine.ProcessBooks(books, getTitleFunc);
+
+            //b) Use the Proper build in delegate.
+            Func<Book, string> getAuthorsFunc = BookFunctions.GetAuthors;
+            LibraryEngine.ProcessBooks(books, getAuthorsFunc);
+
+            //c) Anonymous Method (GetISBN).
+            LibraryEngine.ProcessBooks(books, delegate (Book book) { return book.ISBN; });
+
+            //d) Lambda Expression (GetPublicationDate).
+            LibraryEngine.ProcessBooks(books, book => book.PublicationDate.ToShortDateString());
+            #endregion
+
+
 
         }
     }
