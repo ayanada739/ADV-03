@@ -145,7 +145,42 @@ namespace ADV_03
             //var action = () => Console.WriteLine("Hello"); 
             #endregion
 
+            #region List— Methods That Take Functions As Parameter
+            //List<int> Numbers = Enumerable.Range(1, 100).ToList();
+            //List<int> OddNumbers = GetElementsbasedOnPassedFunction(Numbers, delegate (int X) { return X % 2 == 1; });
+            //Anonymous Function
+            //List<int> OddNumbers = GetElementsbasedOnPassedFunction(Numbers,(X) => X % 2 == 1);
 
+
+            //List<int> OddNumbers = Numbers.FindAll(Number => Number % 2 == 1);
+            //Retrive All Elements That Match Condition
+
+
+            //int OddNumber = Numbers.Find(Number => Number % 2 == 1);
+            //Retrive 1st Elements That Match Condition
+            //List<int> Numbers = Enumerable.Range(1, 100).ToList();
+            //Numbers.ForEach(Number => Number += 10);//invalid
+
+            //Numbers.ForEach(Number => Console.Write(Number+10));
+            //Perform A Specific Action On Each Element In List
+            //Console.WriteLine("\n===============");
+
+            //Numbers.RemoveAll(Number => Number % 5 ==0);
+            //Remove All Element That Match Condition And Return Count of Them
+
+
+            //foreach (int Number in Numbers)
+            //    Console.Write($"{Number}");
+
+
+            #endregion
+
+
+        }
+
+        public static List<int> GetElementsbasedOnPassedFunction(List<int> numbers, Func<int, bool> value)
+        {
+            throw new NotImplementedException();
         }
     }
 
