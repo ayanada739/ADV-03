@@ -33,7 +33,7 @@ namespace ADV_03
 
     internal class Program
     {
-
+         
         static void Main(string[] args)
         {
             #region 07 Delegate
@@ -120,9 +120,9 @@ namespace ADV_03
             #region Action
 
             //Action action; // Non Generic — 0 Parameter — Void
-                           ////Function Take 0 Parameter And Return Void
-                           //  action = delegate { Console.WriteLine("Hello"); };
-                           //  action();
+            ////Function Take 0 Parameter And Return Void
+            //  action = delegate { Console.WriteLine("Hello"); };
+            //  action();
 
             //Action<string> action;// Generic — 1 Parameter[string] - void
             //Action => Refer To Function Take 1 Parameter [string] Return Void
@@ -130,7 +130,19 @@ namespace ADV_03
             // action("Mona");
 
 
-            #endregion 
+            #endregion
+            #endregion
+
+            #region  New Feature At Delegate In c# 10
+            // C# Is Strongly Typed
+            //Predicate<int> predicate = (X) => X > 0;
+            //var Predicate = (int X) => X > 0; //syntax sugar
+
+
+            //var Func = (int X) => X.ToString();
+
+
+            //var action = () => Console.WriteLine("Hello"); 
             #endregion
 
 
