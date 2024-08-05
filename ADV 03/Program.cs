@@ -1,14 +1,29 @@
 ﻿namespace ADV_03
 {
-    //Step 0 : Declare Delegate
-    public delegate int StringFuncDelegate(string str);
-    // New Class [Delegate]
-    // Any Reference From This Delegate Can Refer TO
-    // Function Or More [Pointer To Function)
-    // This Function May be Static Function [Class Member Function]
-    // This Function May be Non Static Function [Object Member Function]
-    // But These Functions Must be with the Same Signature of The Delegate
-    // Regardless Function Name & Access Modifier
+    ///Step 0 : Declare Delegate
+    ///public delegate int StringFuncDelegate(string str);
+    /// New Class [Delegate]
+    /// Any Reference From This Delegate Can Refer TO
+    /// Function Or More [Pointer To Function)
+    /// This Function May be Static Function [Class Member Function]
+    /// This Function May be Non Static Function [Object Member Function]
+    /// But These Functions Must be with the Same Signature of The Delegate
+    /// Regardless Function Name & Access Modifier
+
+    #region Built_in Delegate
+
+    // 1. Predicate
+    // Can Refer To Function That Take One Parameter {Of Any datatype)only and Must be Return bool
+
+    //2. Func
+    // Can Refer To Function That Can Take [0-16]] Parameter and Must be Return bool
+    // Func<>
+
+    //3. Action
+    //  Can Refer To Function Take [0-16]] Parameter and Must be Void
+    //
+
+    #endregion
 
 
     internal class Program
@@ -70,13 +85,17 @@
             #region Delegate Ex 02 Using Generics
 
             //string[] Names = { "Ahmed ", " Mona", "Amr ", "Aya" };
-            //SortingAlgorithms<string>.BubbleSort(Names, CompareFunctions.SortAscending);
+
+            //Func<string, string, bool> compareFunc = CompareFunctions.SortDescending;
+            //SortingAlgorithms<string>.BubbleSort(Names, compareFunc);
 
 
             //foreach (string Name in Names)
             //    Console.WriteLine(Name);
 
             #endregion
+
+
 
 
         }

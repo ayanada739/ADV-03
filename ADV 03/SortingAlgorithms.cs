@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ADV_03
 {
-    public delegate bool CompareFuncDelegte<T>(T A, T B);
+   // public delegate bool CompareFuncDelegte<T>(T A, T B);
     internal class SortingAlgorithms<T>
     {
 
@@ -43,7 +43,7 @@ namespace ADV_03
         //}
 
 
-        public static void BubbleSort(T[] array, CompareFuncDelegte<T> compareFunc)
+        public static void BubbleSort(T[] array, Func<T , T , bool> compareFunc)
         {
             if (array is not null)
             {
