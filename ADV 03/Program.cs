@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection.Metadata;
 using System.Threading.Channels;
+using System.Xml.Linq;
 
 namespace ADV_03
 {
@@ -99,58 +100,53 @@ namespace ADV_03
 
             #endregion
 
+            #region Anonymous Method
+
             #region Predicate
-            //Predicate<int> predicate; // Ref==> Func Take One Parameter <int> and Return bool
-            //predicate = TestingFunctions.Test01;
+            // Predicate<int> predicate; // Ref==> Func Take One Parameter <int> and Return bool
+            // predicate = delegate (int X) { return X > 0; };
+            //Anonymous Func :C# 2.0 [2005]
+
             ////predicate.Invoke(10);
             // Console.WriteLine(predicate(10)); 
             #endregion
 
             #region Func
             // Func<int, string> Func;// Func==> Function Take One Parameter <int> and Return string
-            // Func = TestingFunctions.Test02;
+            // Func = delegate (int X) {return X.ToString();};
             // Console.WriteLine(Func.Invoke(5));//Casting From Int To String 
             #endregion
 
             #region Action
-            //Action<int> action; // Generic — 1 Parameter[int] - void
-            // Action action; // Non Generic — 0 Parameter — Void
-            // Function Take 0 Parameter And Return Void
-            // action = TestingFunctions.Test03;
-            // action();
+
+            //Action action; // Non Generic — 0 Parameter — Void
+                           ////Function Take 0 Parameter And Return Void
+                           //  action = delegate { Console.WriteLine("Hello"); };
+                           //  action();
 
             //Action<string> action;// Generic — 1 Parameter[string] - void
-                             //  //Action => Refer To Function Take 1 Parameter [string] Return Void
-            //action = TestingFunctions.Test04;
-            //action("Mona");
+            //Action => Refer To Function Take 1 Parameter [string] Return Void
+            // action = delegate (string Name) { Console.WriteLine($"Hello {Name}"); };
+            // action("Mona");
 
 
+            #endregion 
             #endregion
+
+
         }
     }
+
 
     class TestingFunctions
     {
-        public static bool Test01(int X)
-        {
-            return X > 0;
-
-        }
-        public static string Test02(int X)
-        {
-            { return X.ToString(); }
-
-        }
-        public static void Test03()
-        {
-            Console.WriteLine("Hello");
-
-        }
-        public static void Test04( string Name)
-        {
-            Console.WriteLine($"Hello {Name}");
-
-        }
-
+        //public static bool Test01(int X){return X > 0;}
+        //public static string Test02(int X){{ return X.ToString(); }}
+        //public static void Test03(){Console.WriteLine("Hello");}
+        //public static void Test04( string Name){Console.WriteLine($"Hello {Name}");
     }
+
+
+
 }
+
